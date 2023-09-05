@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{template "title" .}}</title>
+</head>
+<body>
+    {{template "content" .}}
+</body>
+</html>
+
+// File ./resources/views/index.gohtml
+// File ini berisi tampilan untuk halaman index
+
+{{define "title"}}Index{{end}}
+
+{{define "content"}}
+<h1>Welcome to Fiber App</h1>
+<p>This is the index page.</p>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+{{end}}

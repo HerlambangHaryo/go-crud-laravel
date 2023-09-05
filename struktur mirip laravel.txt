@@ -1,0 +1,82 @@
+// Struktur folder go fiber
+root
+├── app // Folder untuk menyimpan logika bisnis aplikasi
+│   ├── controllers // Folder untuk menyimpan fungsi-fungsi handler yang menangani permintaan HTTP
+│   │   ├── user.go // File untuk menyimpan handler-handler terkait user
+│   │   ├── note.go // File untuk menyimpan handler-handler terkait note
+│   │   └── ...
+│   ├── models // Folder untuk menyimpan struct-struct yang merepresentasikan data atau objek aplikasi
+│   │   ├── user.go // File untuk menyimpan struct user dan metode-metode terkait
+│   │   ├── note.go // File untuk menyimpan struct note dan metode-metode terkait
+│   │   └── ...
+│   ├── services // Folder untuk menyimpan fungsi-fungsi yang melakukan operasi-operasi terhadap data atau objek aplikasi, seperti validasi, enkripsi, dll
+│   │   ├── user.go // File untuk menyimpan fungsi-fungsi terkait user
+│   │   ├── note.go // File untuk menyimpan fungsi-fungsi terkait note
+│   │   └── ...
+│   └── providers // Folder untuk menyimpan fungsi-fungsi yang mendaftarkan layanan-layanan ke aplikasi fiber, seperti database, cache, mailer, dll
+│       ├── database.go // File untuk mendaftarkan layanan database ke aplikasi fiber
+│       ├── cache.go // File untuk mendaftarkan layanan cache ke aplikasi fiber
+│       └── ...
+├── config // Folder untuk menyimpan file-file konfigurasi aplikasi
+│   ├── app.go // File untuk mengatur konfigurasi umum aplikasi, seperti nama, zona waktu, key, dll
+│   ├── database.go // File untuk mengatur konfigurasi database aplikasi, seperti driver, host, port, user, password, dll
+│   ├── cache.go // File untuk mengatur konfigurasi cache aplikasi, seperti driver, host, port, password, dll
+│   └── ...
+├── database // Folder untuk menyimpan file-file yang berhubungan dengan database
+│   ├── migrations // Folder untuk menyimpan file-file migrasi database
+│   │   ├── 2021_09_05_000000_create_users_table.go // File migrasi untuk membuat tabel users
+│   │   ├── 2021_09_05_000001_create_notes_table.go // File migrasi untuk membuat tabel notes
+│   │   └── ...
+│   ├── seeders // Folder untuk menyimpan file-file seeder database
+│   │   ├── user_seeder.go // File seeder untuk mengisi data awal tabel users
+│   │   ├── note_seeder.go // File seeder untuk mengisi data awal tabel notes
+│   │   └── ...
+│   └── factories // Folder untuk menyimpan file-file factory database
+│       ├── user_factory.go // File factory untuk membuat data acak tabel users
+│       ├── note_factory.go // File factory untuk membuat data acak tabel notes
+│       └── ...
+├── public // Folder untuk menyimpan file-file yang bisa diakses secara publik
+│   ├── index.html // File HTML utama untuk aplikasi
+│   ├── css // Folder untuk menyimpan file-file CSS untuk aplikasi
+│   ├── js // Folder untuk menyimpan file-file JS untuk aplikasi
+│   └── ...
+├── resources // Folder untuk menyimpan file-file yang digunakan untuk membuat tampilan aplikasi
+│   ├── views // Folder untuk menyimpan file-file view atau template HTML untuk aplikasi
+│   │   ├── layouts // Folder untuk menyimpan file-file layout atau kerangka HTML untuk aplikasi
+│   │   │   ├── app.gohtml // File layout utama untuk aplikasi
+│   │   │   └── ...
+│   │   ├── user // Folder untuk menyimpan file-file view terkait user
+│   │   │   ├── index.gohtml // File view untuk menampilkan daftar user
+│   │   │   ├── show.gohtml // File view untuk menampilkan detail user
+│   │   │   └── ...
+│   │   ├── note // Folder untuk menyimpan file-file view terkait note
+│   │   │   ├── index.gohtml // File view untuk menampilkan daftar note
+│   │   │   ├── show.gohtml // File view untuk menampilkan detail note
+│   │   │   └── ...
+│   │   └── ...
+│   ├── lang // Folder untuk menyimpan file-file bahasa atau terjemahan untuk aplikasi
+│   │   ├── en // Folder untuk menyimpan file-file bahasa Inggris
+│   │   │   ├── user.go // File bahasa Inggris terkait user
+│   │   │   ├── note.go // File bahasa Inggris terkait note
+│   │   │   └── ...
+│   │   ├── id // Folder untuk menyimpan file-file bahasa Indonesia
+│   │       ├── user.go // File bahasa Indonesia terkait user
+│       └── ...
+├── routes // Folder untuk menyimpan file-file yang mendefinisikan rute-rute aplikasi dan mendaftarkan handler-handler dan middleware-middleware yang sesuai
+│    ├── web.go // File untuk mendefinisikan rute-rute web atau halaman HTML aplikasi
+│    ├── api.go // File untuk mendefinisikan rute-rute api atau JSON aplikasi
+│    └── ...
+├── storage // Folder untuk menyimpan file-file yang digunakan untuk penyimpanan sementara atau permanen
+│    ├── cache // Folder untuk menyimpan file-file cache aplikasi, seperti redis, memcached, dll
+│    ├── logs // Folder untuk menyimpan file-file log aplikasi, seperti error, access, dll
+│    └── ...
+├── tests // Folder untuk menyimpan file-file yang digunakan untuk melakukan pengujian aplikasi
+│    ├── unit // Folder untuk menyimpan file-file unit test aplikasi, yaitu pengujian terhadap fungsi-fungsi individu dalam aplikasi
+│    │    ├── user_test.go // File unit test terkait user
+│    │    ├── note_test.go // File unit test terkait note
+│    │    └── ...
+│    └── feature // Folder untuk menyimpan file-file feature test aplikasi, yaitu pengujian terhadap fitur-fitur dalam aplikasi secara keseluruhan
+├── main.go // File utama yang menjalankan aplikasi dengan mengimpor paket-paket yang dibutuhkan dan memanggil fungsi-fungsi yang sesuai
+├── go.mod // File yang berisi informasi tentang modul go, seperti nama modul, versi go minimum, dan dependensi-dependensi modul lain
+└── go.sum // File yang berisi checksum dari dependensi-dependensi modul go
+

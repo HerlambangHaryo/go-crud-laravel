@@ -1,0 +1,34 @@
+// Struktur folder go fiber
+root
+├── app // Folder untuk menyimpan logika bisnis aplikasi
+│   ├── controllers // Folder untuk menyimpan fungsi-fungsi handler yang menangani permintaan HTTP
+│   │   ├── user.go // File untuk menyimpan handler-handler terkait user
+│   │   ├── note.go // File untuk menyimpan handler-handler terkait note
+│   │   └── ...
+│   ├── models // Folder untuk menyimpan struct-struct yang merepresentasikan data atau objek aplikasi
+│   │   ├── user.go // File untuk menyimpan struct user dan metode-metode terkait
+│   │   ├── note.go // File untuk menyimpan struct note dan metode-metode terkait
+│   │   └── ...
+│   └── services // Folder untuk menyimpan fungsi-fungsi yang melakukan operasi-operasi terhadap data atau objek aplikasi, seperti validasi, enkripsi, dll
+│       ├── user.go // File untuk menyimpan fungsi-fungsi terkait user
+│       ├── note.go // File untuk menyimpan fungsi-fungsi terkait note
+│       └── ...
+├── config // Folder untuk menyimpan file-file konfigurasi aplikasi, seperti variabel lingkungan, koneksi database, dll
+│   ├── config.go // File untuk menyimpan fungsi-fungsi yang membaca dan mengatur konfigurasi aplikasi
+│   └── .env // File untuk menyimpan variabel-variabel lingkungan aplikasi
+├── middleware // Folder untuk menyimpan fungsi-fungsi middleware yang menambahkan fungsionalitas tambahan sebelum atau sesudah handler utama
+│   ├── auth.go // File untuk menyimpan middleware yang melakukan autentikasi dan otorisasi pengguna
+│   ├── logger.go // File untuk menyimpan middleware yang mencatat informasi permintaan dan respons HTTP
+│   └── ...
+├── routes // Folder untuk menyimpan file-file yang mendefinisikan rute-rute aplikasi dan mendaftarkan handler-handler dan middleware-middleware yang sesuai
+│   ├── user.go // File untuk mendefinisikan rute-rute terkait user
+│   ├── note.go // File untuk mendefinisikan rute-rute terkait note
+│   └── ...
+├── utils // Folder untuk menyimpan fungsi-fungsi utilitas yang bersifat umum dan bisa digunakan oleh berbagai bagian aplikasi, seperti pembuat respon, pembaca file, dll
+│   ├── response.go // File untuk menyimpan fungsi-fungsi yang membantu membuat respon HTTP dengan format tertentu, seperti JSON, XML, dll
+│   ├── file.go // File untuk menyimpan fungsi-fungsi yang membantu membaca atau menulis file
+│   └── ...
+├── main.go // File utama yang menjalankan aplikasi dengan mengimpor paket-paket yang dibutuhkan dan memanggil fungsi-fungsi yang sesuai
+├── go.mod // File yang berisi informasi tentang modul go, seperti nama modul, versi go minimum, dan dependensi-dependensi modul lain
+└── go.sum // File yang berisi checksum dari dependensi-dependensi modul go
+

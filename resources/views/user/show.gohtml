@@ -1,0 +1,13 @@
+{{define "title"}}User Show{{end}}
+
+{{define "content"}}
+<h1>User Show</h1>
+<p>ID: {{.user.ID}}</p>
+<p>Name: {{.user.Name}}</p>
+<p>Email: {{.user.Email}}</p>
+<a href="/user/{{.user.ID}}/edit">Edit</a>
+<form method="POST" action="/user/{{.user.ID}}">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">Delete</button>
+</form>
+{{end}}

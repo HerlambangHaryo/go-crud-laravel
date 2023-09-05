@@ -1,0 +1,15 @@
+{{define "title"}}User Edit{{end}}
+
+{{define "content"}}
+<h1>User Edit</h1>
+<form method="POST" action="/user/{{.user.ID}}">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{.user.Name}}" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="{{.user.Email}}" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button type="submit">Update</button>
+</form>
+{{end}}
