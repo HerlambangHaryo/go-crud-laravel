@@ -1,4 +1,4 @@
-module go-bing
+module go-crud-laravel
 
 go 1.20
 
